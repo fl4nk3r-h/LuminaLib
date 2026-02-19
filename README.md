@@ -56,7 +56,7 @@ mysql --version
 ### 1) Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/fl4nk3r-h/LuminaLib
 cd LuminaLib
 ```
 
@@ -153,4 +153,4 @@ npm run lint
 
 ## License
 
-Add your preferred license information here.
+MIT license
