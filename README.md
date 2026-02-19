@@ -66,8 +66,8 @@ Create a `.env` file inside `luminalib/`:
 
 ```dotenv
 DB_URL=jdbc:mysql://localhost:3306/luminalib?createDatabaseIfNotExist=true
-DB_USERNAME=root
-DB_PASSWORD=root
+DB_USERNAME=username
+DB_PASSWORD=password
 DB_SHOW_SQL=true
 
 JWT_SECRET=replace_with_a_strong_secret
