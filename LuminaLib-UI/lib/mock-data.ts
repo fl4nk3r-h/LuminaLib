@@ -1,0 +1,111 @@
+import type { Book } from "@/lib/types";
+
+export const mockBooks: Book[] = [
+  {
+    id: 1,
+    title: "Introduction to Algorithms",
+    author: "Thomas H. Cormen",
+    isbn: "978-0262033848",
+    genre: "Computer Science",
+    available: true,
+    quantity: 5,
+    publishedYear: 2009,
+    description:
+      "A comprehensive introduction to the modern study of computer algorithms.",
+  },
+  {
+    id: 2,
+    title: "Clean Code",
+    author: "Robert C. Martin",
+    isbn: "978-0132350884",
+    genre: "Software Engineering",
+    available: true,
+    quantity: 3,
+    publishedYear: 2008,
+    description:
+      "A handbook of agile software craftsmanship for writing clean, readable code.",
+  },
+  {
+    id: 3,
+    title: "Design Patterns",
+    author: "Erich Gamma",
+    isbn: "978-0201633610",
+    genre: "Software Engineering",
+    available: false,
+    quantity: 0,
+    publishedYear: 1994,
+    description:
+      "Elements of reusable object-oriented software design patterns.",
+  },
+  {
+    id: 4,
+    title: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt",
+    isbn: "978-0135957059",
+    genre: "Software Engineering",
+    available: true,
+    quantity: 2,
+    publishedYear: 2019,
+    description:
+      "Your journey to mastery through pragmatic tips and techniques.",
+  },
+  {
+    id: 5,
+    title: "Structure and Interpretation of Computer Programs",
+    author: "Harold Abelson",
+    isbn: "978-0262510875",
+    genre: "Computer Science",
+    available: true,
+    quantity: 4,
+    publishedYear: 1996,
+    description:
+      "A classic textbook in computer science used at MIT.",
+  },
+  {
+    id: 6,
+    title: "Artificial Intelligence: A Modern Approach",
+    author: "Stuart Russell & Peter Norvig",
+    isbn: "978-0136042594",
+    genre: "Artificial Intelligence",
+    available: false,
+    quantity: 0,
+    publishedYear: 2020,
+    description:
+      "The most popular AI textbook used in universities worldwide.",
+  },
+  {
+    id: 7,
+    title: "Database System Concepts",
+    author: "Abraham Silberschatz",
+    isbn: "978-0078022159",
+    genre: "Database",
+    available: true,
+    quantity: 6,
+    publishedYear: 2019,
+    description:
+      "A comprehensive guide to database systems and SQL.",
+  },
+  {
+    id: 8,
+    title: "Computer Networking: A Top-Down Approach",
+    author: "James Kurose & Keith Ross",
+    isbn: "978-0133594140",
+    genre: "Networking",
+    available: true,
+    quantity: 3,
+    publishedYear: 2016,
+    description:
+      "An accessible approach to computer networking concepts.",
+  },
+  {
+    id: 9,
+    title: "Operating System Concepts",
+    author: "Abraham Silberschatz",
+    isbn: "978-1119800361",
+    genre: "Operating Systems",
+    available: true,
+    quantity: 4,
+    publishedYear: 2021,
+    description: "The essential guide to operating system fundamentals.",
+  },
+];

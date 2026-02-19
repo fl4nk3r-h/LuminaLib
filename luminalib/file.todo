@@ -1,0 +1,108 @@
+===============================
+SPRING BOOT PROJECT TODO LIST
+===============================
+
+✔ ENTITY LAYER
+[✔] Create Entity classes
+[✔] Add JPA annotations
+[✔] Define relationships (if any)
+
+--------------------------------
+🚧 EXCEPTION HANDLING (IN PROGRESS)
+--------------------------------
+[✔] Watch : https://www.youtube.com/watch?v=7OT3EjyI2x4
+
+[✔] Create Custom Exception class
+      - ResourceNotFoundException
+      - BadRequestException
+      - UnauthorizedException
+
+[✔] Create GlobalExceptionHandler
+      - Use @RestControllerAdvice
+      - Override default Spring error response
+      - Return JSON instead of raw HTML
+      - Standard error structure:
+            {
+              timestamp,
+              status,
+              error,
+              message,
+              path
+            }
+
+[✔] Disable default Whitelabel Error Page : Done in application.properties
+
+[ ] Later Add the White Label Error thing in Spring Security (More Robust)
+
+--------------------------------
+📁 CONFIG LAYER
+--------------------------------
+[ ] Watch : https://www.youtube.com/watch?v=OIXtqbNJ01I
+[ ] CORS Configuration
+[ ] ModelMapper / Mapper Config (if needed)
+[ ] Swagger/OpenAPI config
+[ ] SecurityConfig
+
+--------------------------------
+🎮 CONTROLLER LAYER
+--------------------------------
+[ ] Create REST endpoints
+[ ] Add request validation (@Valid)
+[ ] Use DTO instead of Entity
+[ ] Proper ResponseEntity usage
+
+--------------------------------
+📦 DTO LAYER
+--------------------------------
+[ ] Request DTO
+[ ] Response DTO
+[ ] Validation annotations
+
+--------------------------------
+🗃 REPOSITORY LAYER
+--------------------------------
+[ ] JpaRepository interfaces
+[ ] Custom queries (if needed)
+[ ] Pagination support
+
+--------------------------------
+🔐 SECURITY LAYER
+--------------------------------
+[ ] Configure Spring Security
+[ ] JWT Authentication
+[ ] Password encoding
+[ ] Role-based authorization
+[ ] Custom AuthenticationEntryPoint
+
+--------------------------------
+⚙ SERVICE LAYER
+--------------------------------
+[ ] Business logic implementation
+[ ] Exception throwing logic
+[ ] Mapping Entity <-> DTO
+
+--------------------------------
+📄 application.properties
+--------------------------------
+[ ] Database config
+[ ] JPA config
+[ ] Show SQL (dev only)
+[ ] Server port config
+[ ] Disable stacktrace exposure
+[ ] Error message configuration
+
+--------------------------------
+🧪 TESTING
+--------------------------------
+[ ] Unit tests (Service layer)
+[ ] Integration tests
+[ ] Postman collection
+
+--------------------------------
+🚀 FINAL CHECK
+--------------------------------
+[ ] No raw HTML error pages
+[ ] Clean JSON error response
+[ ] Proper status codes
+[ ] No entity exposure
+[ ] Password encrypted in DB

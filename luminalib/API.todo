@@ -1,0 +1,97 @@
+# Authentication API TODO
+
+[ ] POST /api/auth/register
+    - Accept signup form data (username/email/password)
+    - Validate input
+    - Check if user already exists
+    - Hash password
+    - Create and save new User entity
+    - Return success response
+
+[ ] POST /api/auth/login
+    - Accept login credentials
+    - Authenticate user
+    - Generate JWT token
+    - Fetch user roles
+    - Return:
+        {
+          "token": "<jwt_token>",
+          "roles": ["ROLE_USER"]
+        }
+
+[ ] POST /api/auth/refresh
+    - Accept refresh token
+    - Validate refresh token
+    - Generate new JWT access token
+    - Return new token
+
+    
+ # Books API TODO
+
+[ ] GET /api/books
+    - Implement pagination support (page, size, sort)
+    - Fetch all books from DB
+    - Return paged response:
+        {
+          "content": [...],
+          "page": 0,
+          "size": 10,
+          "totalElements": 100,
+          "totalPages": 10
+        }
+
+[ ] GET /api/books/search?t=...
+    - Accept query param "t"
+    - Search by title OR author (case-insensitive)
+    - Return matching books list
+
+[ ] GET /api/books/{id}
+    - Validate book ID
+    - Fetch book by ID
+    - Return single book object
+    - Handle "book not found"
+
+[ ] POST /api/books   (Admin Only)
+    - Validate input
+    - Save new book entity to DB
+    - Return created book
+    - Restrict access to ROLE_ADMIN
+
+[ ] PUT /api/books/{id}
+    - Validate book ID
+    - Check if book exists
+    - Update book fields
+    - Save changes
+    - Return updated book
+
+[ ] DELETE /api/books/{id}
+    - Validate book ID
+    - Check if book exists
+    - Delete book from DB
+    - Return success response
+
+
+# Borrow / Return API TODO
+
+[ ] POST /api/borrow/{bookId}
+    - Validate bookId
+    - Check if book exists
+    - Check if availableCopies > 0
+    - Check if user already borrowed this book (prevent duplicate borrow)
+    - Decrement availableCopies
+    - Create Borrow record (userId, bookId, borrowDate)
+    - Save transaction
+    - Return success response
+
+[ ] POST /api/return/{bookId}
+    - Validate bookId
+    - Check if borrow record exists for current user
+    - Increment availableCopies
+    - Mark borrow record as returned (add returnDate or delete record)
+    - Save changes
+    - Return success response
+
+[ ] GET /api/users/me/books
+    - Identify current authenticated user
+    - Fetch all active borrowed books for user
+    - Return list of borrowed books
